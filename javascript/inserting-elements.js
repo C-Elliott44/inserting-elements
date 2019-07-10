@@ -27,3 +27,23 @@ $(function() {
     // you can either add also receive what the current attribute is by specifing what you are looking for and ommiting the second parameter
     $('ul').attr('id', 'group');
 });
+
+//   ********** Changing CSS practice, not sure if this will mess with the above code *************
+//   ********** just comment out the code that is above or below this line if it does **********
+
+$(function() {
+    // Get the background-color css using .css and place it into a variable
+    // Selecting the li element, even though there are multiple, will return only the very first li's background
+    var backgroundColor = $('li').css('background-color');
+    // In a p element denote to the user what color the background color was by using .append() on the ul
+    $('ul').append('<p>Color was: ' + backgroundColor + '</p>');
+    // Update the css for all the li elements using object literal notation, 
+    // Use ':' to seperate the property name from its value and a ',' to seperate property value pairs from each other
+    $('li').css({
+        'background-color': '#c5a996',
+        'border': '1px solid #fff',
+        'color': '#000',
+        'font-family': 'Georgia',
+        'padding-left': '+=75'
+    });
+});
