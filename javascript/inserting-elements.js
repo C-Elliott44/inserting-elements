@@ -47,3 +47,15 @@ $(function() {
         'padding-left': '+=75'
     });
 });
+
+//   ********** Attribute practice, not sure if this will mess with the above code *************
+//   ********** just comment out the code that is above or below this line if it does **********
+
+// Simple use of .each() to loop through selected jQuery elements and apply statements to add the li's id to the visible text
+$(function(){
+    $('li').each(function() {
+        // Using 'this' references the selected jQuery elements
+        var ids = this.id;
+        $(this).append('<span class="order"> ' + ids + '</span>');
+    });
+});
